@@ -31,4 +31,4 @@ Une situation est dite « plutôt suivie d'une hausse » (ou d'une baisse) quand
 
 L'historique est gardé dans `data/history/`, et `data/state.json` retient les situations déjà notifiées pour ne pas envoyer deux fois la même alerte. Le premier passage enregistre les situations en cours sans notifier.
 
-Le sujet ntfy est la variable `NTFY_TOPIC` du dépôt (Settings → Secrets and variables → Actions → Variables). Pour envoyer une notification de test : onglet Actions → Analyse horaire → Run workflow → cocher « Envoyer une notification de test ».
+Le sujet ntfy par défaut est `signaux-crypto-fcadae2e`. Pour en changer, créer la variable `NTFY_TOPIC` du dépôt (Settings → Secrets and variables → Actions → Variables). Pour envoyer une notification de test : onglet Actions → Analyse horaire → Run workflow → cocher « Envoyer une notification de test », ou pousser un commit dont le message contient `[notif-test]`.

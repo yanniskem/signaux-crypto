@@ -42,9 +42,10 @@ jobs:
       - name: Récupérer les cours et analyser
         run: node scripts/run.mjs
         env:
-          NTFY_TOPIC: ${{ vars.NTFY_TOPIC }}
+          NTFY_TOPIC: ${{ vars.NTFY_TOPIC || 'signaux-crypto-fcadae2e' }}
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-          TEST_NOTIFICATION: ${{ inputs.test_notification }}
+          # Notification de test : case cochée au lancement manuel, ou commit contenant [notif-test]
+          TEST_NOTIFICATION: ${{ inputs.test_notification || contains(github.event.head_commit.message, '[notif-test]') }}
 
       - name: Enregistrer l'historique
         run: |
