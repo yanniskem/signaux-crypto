@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Signaux crypto</title>
+<meta name="description" content="Cours des principales cryptos et, pour chaque situation notable, ce qui s'est passé les fois précédentes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout : une colonne façon bande de cotation ; chaque crypto est une ligne qui s'ouvre sur son analyse. */
+:root {
+  --bg: #eef1f4; --surface: #ffffff; --ink: #0f1720; --muted: #5a6573; --line: #d9dfe6;
+  --accent: #1d4ed8; --accent-soft: #e7edfc;
+  --up: #0d7a52; --down: #c0352b; --flat: #6b7280;
+  --font-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1015; --surface: #141a21; --ink: #e7ecf2; --muted: #93a0ae; --line: #26303b;
+    --accent: #7c9cff; --accent-soft: #19233d; --up: #34c38f; --down: #ff6f61; --flat: #8b95a1;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1015; --surface: #141a21; --ink: #e7ecf2; --muted: #93a0ae; --line: #26303b;
+  --accent: #7c9cff; --accent-soft: #19233d; --up: #34c38f; --down: #ff6f61; --flat: #8b95a1;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 15px/1.5 var(--font-body);
+  padding: env(safe-area-inset-top, 0px) 16px calc(env(safe-area-inset-bottom, 0px) + 32px);
+}
+.wrap { max-width: 720px; margin: 0 auto; display: grid; gap: 20px; padding-block: 20px; }
+.num { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+
+header { display: grid; gap: 6px; }
+h1 {
+  font-family: var(--font-display); font-stretch: 75%; font-weight: 800;
+  font-size: clamp(2rem, 8vw, 2.75rem); line-height: 1; letter-spacing: -0.01em; margin: 0;
+  text-transform: uppercase;
+}
+.updated { color: var(--muted); font-size: 0.85rem; }
+.lede { margin: 0; color: var(--muted); max-width: 60ch; }
+
+.summary {
+  display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline;
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding-block: 10px;
+  font-size: 0.9rem;
+}
+.summary strong { font-family: var(--font-display); font-stretch: 75%; font-size: 1.4rem; font-weight: 700; }
+
+.list { display: grid; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.coin + .coin { border-top: 1px solid var(--line); }
+.row {
+  width: 100%; display: grid; grid-template-columns: 4.2rem minmax(0, 1fr) auto; gap: 4px 12px; align-items: center;
+  padding: 12px 14px; background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.row:hover { background: var(--accent-soft); }
+.row:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.tick { font-family: var(--font-display); font-stretch: 80%; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.02em; }
+.name { color: var(--muted); font-size: 0.85rem; min-width: 0; }
+.name .flags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.right { text-align: right; display: grid; gap: 1px; }
+.price { font-size: 0.95rem; }
+.chg { font-size: 0.8rem; }
+.up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--flat); }
+.pill {
+  display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 600;
+  padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+  letter-spacing: 0.02em; text-transform: uppercase;
+}
+.pill.stale { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+
+.detail { padding: 4px 14px 18px; display: grid; gap: 16px; }
+.chart { display: grid; gap: 4px; }
+.readout { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); }
+.spark { width: 100%; height: 120px; display: block; touch-action: pan-y; }
+.figures { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.fig { border-left: 2px solid var(--line); padding-left: 8px; }
+.fig .k { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.fig .v { font-size: 1rem; }
+
+h3 {
+  margin: 0; font-family: var(--font-display); font-stretch: 85%; font-weight: 700; font-size: 0.85rem;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+}
+.sit { border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: grid; gap: 10px; }
+.sit.active { border-color: var(--accent); background: var(--accent-soft); }
+.sit-head { display: flex; flex-wrap: wrap; gap: 6px 10px; justify-content: space-between; align-items: baseline; }
+.sit-title { font-weight: 600; text-wrap: balance; }
+.sit-detail { font-size: 0.85rem; color: var(--muted); }
+.verdict { font-size: 0.78rem; font-weight: 600; display: inline-flex; gap: 4px; align-items: center; white-space: nowrap; }
+.verdict.hausse { color: var(--up); } .verdict.baisse { color: var(--down); } .verdict.neutre, .verdict.peu { color: var(--muted); }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.82rem; }
+th, td { padding: 5px 6px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; white-space: normal; }
+th { font-weight: 500; color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; white-space: normal; vertical-align: bottom; }
+td:not(:first-child) { width: 30%; }
+.past { font-size: 0.8rem; color: var(--muted); }
+.past span { white-space: nowrap; }
+
+details.others summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: 0.9rem; }
+details.others[open] summary { margin-bottom: 10px; }
+.others .stack { display: grid; gap: 8px; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 10px; }
+.card h2 { margin: 0; font-family: var(--font-display); font-stretch: 80%; font-weight: 700; font-size: 1.25rem; }
+.card p, .card ol { margin: 0; }
+.card ol { padding-left: 1.2em; display: grid; gap: 6px; }
+.topic { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.topic code { font-family: var(--font-data); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; user-select: all; word-break: break-all; }
+button.copy { font: inherit; font-size: 0.85rem; padding: 4px 10px; border-radius: 6px; border: 1px solid var(--accent); background: none; color: var(--accent); cursor: pointer; }
+button.copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a { color: var(--accent); }
+dl { margin: 0; display: grid; gap: 8px; }
+dt { font-weight: 600; }
+dd { margin: 0; color: var(--muted); }
+footer { color: var(--muted); font-size: 0.8rem; max-width: 65ch; }
+.empty { padding: 20px 14px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .row { transition: background 0.15s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Signaux crypto</h1>
+    <p class="lede">Les cours des principales cryptos, analysés toutes les heures. Pour chaque situation notable, ce qui s'est passé les fois précédentes.</p>
+    <div class="updated" id="updated">Chargement des données…</div>
+  </header>
+
+  <div class="summary" id="summary" hidden></div>
+
+  <section class="list" id="list" aria-label="Cryptos suivies">
+    <div class="empty">Chargement…</div>
+  </section>
+
+  <section class="card" id="notif" hidden>
+    <h2>Recevoir les alertes sur ton téléphone</h2>
+    <ol>
+      <li>Installe l'application gratuite <a href="https://ntfy.sh" target="_blank" rel="noopener">ntfy</a> (Android ou iPhone).</li>
+      <li>Appuie sur « + » et abonne-toi à ce sujet :
+        <div class="topic"><code id="topic"></code><button class="copy" id="copy" type="button">Copier</button></div>
+      </li>
+      <li>Tu reçois une notification dès qu'une nouvelle situation apparaît sur une des cryptos.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Comment lire l'analyse</h2>
+    <dl>
+      <dt>Les fois précédentes</dt>
+      <dd>Toutes les fois où la même situation est apparue depuis le début de l'historique, et l'évolution du prix 7 et 30 jours après.</dd>
+      <dt>Jour normal</dt>
+      <dd>La même mesure sur tous les jours, sans condition. Si la situation ne fait pas mieux ou moins bien qu'un jour normal, elle n'apprend pas grand-chose.</dd>
+      <dt>RSI</dt>
+      <dd>Indice de 0 à 100 qui mesure la force des hausses et des baisses récentes. Sous 30, le prix a beaucoup baissé en peu de temps ; au-dessus de 70, il a beaucoup monté.</dd>
+      <dt>Moyennes 50 et 200 jours</dt>
+      <dd>Le prix moyen sur les 50 et 200 derniers jours. Quand la moyenne courte passe au-dessus de la longue, la tendance récente devient plus forte que la tendance de fond.</dd>
+    </dl>
+  </section>
+
+  <footer>
+    Cours : Coinbase, en dollars américains. Ces chiffres décrivent le passé : ils ne prévoient pas l'évolution des cours et ne sont pas des conseils d'investissement. Les cryptos peuvent perdre une grande partie de leur valeur rapidement.
+  </footer>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const pct = (x, d = 1) => x == null ? '–' : `${x > 0 ? '+' : x < 0 ? '−' : ''}${Math.abs(x * 100).toFixed(d).replace('.', ',')} %`;
+  const share = (x) => x == null ? '–' : `${Math.round(x * 100)} %`;
+  const cls = (x) => x == null ? 'flat' : x > 0 ? 'up' : x < 0 ? 'down' : 'flat';
+  const arrow = (x) => x == null ? '' : x > 0 ? '▲ ' : x < 0 ? '▼ ' : '';
+  const money = (v) => {
+    const digits = v >= 1000 ? 0 : v >= 1 ? 2 : 4;
+    return `${v.toLocaleString('fr-FR', { minimumFractionDigits: digits, maximumFractionDigits: digits })} $`;
+  };
+  const dateFr = (d) => new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+  const ago = (iso) => {
+    const m = Math.round((Date.now() - new Date(iso)) / 60000);
+    if (m < 1) return "à l'instant";
+    if (m < 60) return `il y a ${m} min`;
+    const h = Math.round(m / 60);
+    return h < 48 ? `il y a ${h} h` : `le ${dateFr(iso)}`;
+  };
+  const VERDICT = {
+    hausse: ['▲', 'Plutôt suivi d\'une hausse'],
+    baisse: ['▼', 'Plutôt suivi d\'une baisse'],
+    neutre: ['=', 'Comme un jour normal'],
+    peu: ['?', 'Trop peu de cas pour conclure'],
+  };
+
+  let data = null;
+  let open = (location.hash || '').slice(1).toUpperCase() || null;
+
+  function sitCard(coin, s) {
+    const [icon, text] = VERDICT[s.verdict];
+    const b = coin.baseline;
+    const h7 = s.stats.h7, h30 = s.stats.h30;
+    const past = s.last.length
+      ? `<div class="past">Dernières fois : ${s.last.map((l) => `<span>${esc(dateFr(l.date))} <span class="num ${cls(l.r30)}">${l.r30 == null ? '(30 j pas encore écoulés)' : pct(l.r30, 0) + ' à 30 j'}</span></span>`).join(' · ')}</div>`
+      : '';
+    return `<div class="sit${s.active ? ' active' : ''}">
+      <div class="sit-head">
+        <div><div class="sit-title">${esc(s.label)}</div>${s.active ? `<div class="sit-detail">En ce moment : ${esc(s.detail)}</div>` : ''}</div>
+        <span class="verdict ${s.verdict}"><span aria-hidden="true">${icon}</span>${text}</span>
+      </div>
+      <div class="table-wrap"><table>
+        <thead><tr><th></th><th>Après cette situation</th><th>Jour normal</th></tr></thead>
+        <tbody>
+          <tr><td>Cas étudiés</td><td class="num">${h30.n ?? 0}</td><td class="num">${b.h30.n.toLocaleString('fr-FR')}</td></tr>
+          <tr><td>Prix plus haut 7 j après</td><td class="num">${share(h7.up)}</td><td class="num">${share(b.h7.up)}</td></tr>
+          <tr><td>Prix plus haut 30 j après</td><td class="num">${share(h30.up)}</td><td class="num">${share(b.h30.up)}</td></tr>
+          <tr><td>Évolution médiane à 30 j</td><td class="num ${cls(h30.median)}">${pct(h30.median)}</td><td class="num ${cls(b.h30.median)}">${pct(b.h30.median)}</td></tr>
+        </tbody>
+      </table></div>
+      ${h30.n ? `<div class="past">Pire cas à 30 j : <span class="num down">${pct(h30.min, 0)}</span> · meilleur : <span class="num up">${pct(h30.max, 0)}</span></div>` : ''}
+      ${past}
+    </div>`;
+  }
+
+  function detail(coin) {
+    const active = coin.situations.filter((s) => s.active);
+    const others = coin.situations.filter((s) => !s.active);
+    return `<div class="detail">
+      <div class="chart">
+        <div class="readout"><span id="ro-${coin.symbol}">120 derniers jours</span><span class="num">${money(coin.price)}</span></div>
+        <svg class="spark" id="sp-${coin.symbol}" role="img" aria-label="Cours de ${esc(coin.name)} sur 120 jours"></svg>
+      </div>
+      <div class="figures">
+        <div class="fig"><div class="k">7 jours</div><div class="v num ${cls(coin.ch7d)}">${pct(coin.ch7d)}</div></div>
+        <div class="fig"><div class="k">RSI 14 j</div><div class="v num">${coin.rsi == null ? '–' : Math.round(coin.rsi)}</div></div>
+        <div class="fig"><div class="k">vs moy. 200 j</div><div class="v num ${cls(coin.vsSma200)}">${pct(coin.vsSma200)}</div></div>
+      </div>
+      <h3>${active.length ? 'Situations en cours' : 'Aucune situation notable en ce moment'}</h3>
+      ${active.map((s) => sitCard(coin, s)).join('')}
+      <details class="others"><summary>Historique des ${others.length} autres situations suivies</summary>
+        <div class="stack">${others.map((s) => sitCard(coin, s)).join('')}</div>
+      </details>
+      <div class="past">Historique analysé : ${coin.days.toLocaleString('fr-FR')} jours, depuis le ${esc(dateFr(coin.since))}.</div>
+    </div>`;
+  }
+
+  function drawSpark(coin) {
+    const svg = $(`sp-${coin.symbol}`);
+    if (!svg) return;
+    const pts = coin.spark;
+    const W = Math.max(240, svg.clientWidth || 320), H = 120, pad = 6;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const min = Math.min(...pts), max = Math.max(...pts), span = max - min || 1;
+    const x = (i) => pad + (i / (pts.length - 1)) * (W - pad * 2);
+    const y = (v) => pad + (1 - (v - min) / span) * (H - pad * 2);
+    const line = pts.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('');
+    const color = pts[pts.length - 1] >= pts[0] ? 'var(--up)' : 'var(--down)';
+    const last = pts.length - 1;
+    const end = new Date(data.generatedAt);
+    const dayOf = (i) => new Date(end.getTime() - (last - i) * 86400000);
+    svg.innerHTML = `
+      <line x1="${pad}" x2="${W - pad}" y1="${y(pts[0]).toFixed(1)}" y2="${y(pts[0]).toFixed(1)}" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/>
+      <path d="${line}L${x(last).toFixed(1)},${H}L${x(0).toFixed(1)},${H}Z" fill="${color}" fill-opacity="0.1"/>
+      <path d="${line}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="${x(last).toFixed(1)}" cy="${y(pts[last]).toFixed(1)}" r="4" fill="${color}" stroke="var(--surface)" stroke-width="2"/>
+      <g class="hover" visibility="hidden">
+        <line class="hx" y1="0" y2="${H}" stroke="var(--muted)" stroke-width="1"/>
+        <circle class="hd" r="4" fill="${color}" stroke="var(--surface)" stroke-width="2"/>
+      </g>`;
+    const g = svg.querySelector('.hover'), hx = svg.querySelector('.hx'), hd = svg.querySelector('.hd');
+    const ro = $(`ro-${coin.symbol}`);
+    const move = (ev) => {
+      const r = svg.getBoundingClientRect();
+      const px = ((ev.clientX - r.left) / r.width) * W;
+      const i = Math.max(0, Math.min(last, Math.round(((px - pad) / (W - pad * 2)) * last)));
+      hx.setAttribute('x1', x(i)); hx.setAttribute('x2', x(i));
+      hd.setAttribute('cx', x(i)); hd.setAttribute('cy', y(pts[i]));
+      g.setAttribute('visibility', 'visible');
+      ro.textContent = `${dateFr(dayOf(i))} : ${money(pts[i])}`;
+    };
+    const leave = () => { g.setAttribute('visibility', 'hidden'); ro.textContent = '120 derniers jours'; };
+    svg.onpointermove = move; svg.onpointerdown = move; svg.onpointerleave = leave;
+  }
+
+  function render() {
+    const coins = data.coins;
+    const activeTotal = coins.reduce((n, c) => n + c.situations.filter((s) => s.active).length, 0);
+    $('updated').textContent = `Mis à jour ${ago(data.generatedAt)}`;
+    const sum = $('summary');
+    sum.hidden = false;
+    sum.innerHTML = `<span><strong class="num">${activeTotal}</strong> situation${activeTotal > 1 ? 's' : ''} en cours</span><span>${coins.length} cryptos suivies</span>`;
+    $('list').innerHTML = coins.map((c) => {
+      const act = c.situations.filter((s) => s.active).length;
+      const isOpen = open === c.symbol;
+      return `<div class="coin" id="${c.symbol}">
+        <button class="row" type="button" data-sym="${c.symbol}" aria-expanded="${isOpen}">
+          <span class="tick">${esc(c.symbol)}</span>
+          <span class="name">${esc(c.name)}<span class="flags">${act ? `<span class="pill">${act} en cours</span>` : ''}${c.stale ? '<span class="pill stale">Pas à jour</span>' : ''}</span></span>
+          <span class="right"><span class="price num">${money(c.price)}</span><span class="chg num ${cls(c.ch24h)}">${arrow(c.ch24h)}${pct(c.ch24h)} 24 h</span></span>
+        </button>
+        ${isOpen ? detail(c) : ''}
+      </div>`;
+    }).join('');
+    if (open) {
+      const c = coins.find((c) => c.symbol === open);
+      if (c) drawSpark(c);
+    }
+    if (data.ntfyTopic) {
+      $('notif').hidden = false;
+      $('topic').textContent = data.ntfyTopic;
+    }
+  }
+
+  $('list').addEventListener('click', (ev) => {
+    const btn = ev.target.closest('.row');
+    if (!btn) return;
+    const sym = btn.dataset.sym;
+    open = open === sym ? null : sym;
+    try { history.replaceState(null, '', open ? `#${open}` : location.pathname); } catch {}
+    render();
+    if (open) $(open).scrollIntoView({ block: 'start', behavior: 'smooth' });
+  });
+
+  $('copy').addEventListener('click', async () => {
+    const btn = $('copy');
+    try {
+      await navigator.clipboard.writeText(data.ntfyTopic);
+      btn.textContent = 'Copié';
+    } catch {
+      const r = document.createRange();
+      r.selectNodeContents($('topic'));
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      btn.textContent = 'Sélectionné';
+    }
+    setTimeout(() => (btn.textContent = 'Copier'), 2000);
+  });
+
+  let resizeTimer;
+  addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { if (data && open) { const c = data.coins.find((c) => c.symbol === open); if (c) drawSpark(c); } }, 150);
+  });
+
+  async function load(first) {
+    try {
+      const res = await fetch(`data.json?t=${Date.now()}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.status);
+      data = await res.json();
+      render();
+      if (first && open && $(open)) $(open).scrollIntoView({ block: 'start' });
+    } catch {
+      if (data) return; // on garde l'affichage précédent si un rafraîchissement échoue
+      $('updated').textContent = 'La première analyse n\'est pas encore disponible. Reviens dans quelques minutes.';
+      $('list').innerHTML = '<div class="empty">Aucune donnée pour le moment.</div>';
+    }
+  }
+  load(true);
+  setInterval(() => { if (document.visibilityState === 'visible') load(false); }, 10 * 60 * 1000);
+})();
+</script>
+</body>
+</html>
