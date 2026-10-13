@@ -1,3 +1,16 @@
 {
- "seen": {}
+ "seen": {
+  "ADA:chute_24h": {
+   "since": 1791851911789,
+   "lastActive": 1791851911789
+  },
+  "AVAX:chute_24h": {
+   "since": 1791851911789,
+   "lastActive": 1791851911789
+  },
+  "DOT:chute_24h": {
+   "since": 1791851911789,
+   "lastActive": 1791851911789
+  }
+ }
 }
