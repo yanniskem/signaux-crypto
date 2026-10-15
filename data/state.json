@@ -10,11 +10,15 @@
   },
   "AVAX:chute_24h": {
    "since": 1792031705649,
-   "lastActive": 1792031705649
+   "lastActive": 1792035313539
   },
   "DOT:chute_24h": {
    "since": 1792031705649,
    "lastActive": 1792031705649
+  },
+  "LINK:chute_24h": {
+   "since": 1792035313539,
+   "lastActive": 1792035313539
   }
  }
 }
