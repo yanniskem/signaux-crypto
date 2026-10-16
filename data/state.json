@@ -2,7 +2,11 @@
  "seen": {
   "AVAX:envolee_24h": {
    "since": 1792147015780,
-   "lastActive": 1792150557848
+   "lastActive": 1792154672049
+  },
+  "DOT:envolee_24h": {
+   "since": 1792154672049,
+   "lastActive": 1792154672049
   }
  }
 }
