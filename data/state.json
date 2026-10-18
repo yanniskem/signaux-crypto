@@ -3,6 +3,10 @@
   "DOT:chute_24h": {
    "since": 1792298061106,
    "lastActive": 1792298061106
+  },
+  "DOT:chute_7j": {
+   "since": 1792351739521,
+   "lastActive": 1792351739521
   }
  }
 }
