@@ -1,3 +1,8 @@
 {
- "seen": {}
+ "seen": {
+  "DOT:chute_24h": {
+   "since": 1792298061106,
+   "lastActive": 1792298061106
+  }
+ }
 }
