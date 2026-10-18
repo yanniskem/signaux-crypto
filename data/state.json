@@ -2,11 +2,15 @@
  "seen": {
   "DOT:chute_24h": {
    "since": 1792298061106,
-   "lastActive": 1792298061106
+   "lastActive": 1792355465817
   },
   "DOT:chute_7j": {
    "since": 1792351739521,
-   "lastActive": 1792351739521
+   "lastActive": 1792355465817
+  },
+  "ADA:chute_7j": {
+   "since": 1792355465817,
+   "lastActive": 1792355465817
   }
  }
 }
