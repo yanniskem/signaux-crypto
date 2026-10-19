@@ -1,9 +1,5 @@
 {
  "seen": {
-  "DOT:chute_24h": {
-   "since": 1792298061106,
-   "lastActive": 1792355465817
-  },
   "DOT:chute_7j": {
    "since": 1792351739521,
    "lastActive": 1792359107529
@@ -14,7 +10,7 @@
   },
   "DOT:envolee_24h": {
    "since": 1792425384356,
-   "lastActive": 1792438697799
+   "lastActive": 1792442200575
   }
  }
 }
