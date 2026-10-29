@@ -2,15 +2,19 @@
  "seen": {
   "DOGE:croix_mort": {
    "since": 1793149018791,
-   "lastActive": 1793310290656
+   "lastActive": 1793313873414
   },
   "DOT:chute_24h": {
    "since": 1793306774996,
-   "lastActive": 1793310290656
+   "lastActive": 1793313873414
   },
   "DOT:chute_7j": {
    "since": 1793306774996,
-   "lastActive": 1793310290656
+   "lastActive": 1793313873414
+  },
+  "LINK:chute_24h": {
+   "since": 1793313873414,
+   "lastActive": 1793313873414
   }
  }
 }
