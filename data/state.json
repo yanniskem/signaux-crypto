@@ -2,7 +2,7 @@
  "seen": {
   "DOGE:croix_mort": {
    "since": 1793149018791,
-   "lastActive": 1793368929573
+   "lastActive": 1793372300407
   },
   "DOT:chute_24h": {
    "since": 1793306774996,
@@ -30,7 +30,7 @@
   },
   "AVAX:rsi_bas": {
    "since": 1793317229668,
-   "lastActive": 1793368929573
+   "lastActive": 1793372300407
   },
   "DOT:rsi_bas": {
    "since": 1793317229668,
@@ -38,7 +38,7 @@
   },
   "ETH:rsi_bas": {
    "since": 1793321854926,
-   "lastActive": 1793368929573
+   "lastActive": 1793372300407
   },
   "SOL:chute_24h": {
    "since": 1793321854926,
@@ -46,7 +46,7 @@
   },
   "SOL:rsi_bas": {
    "since": 1793321854926,
-   "lastActive": 1793368929573
+   "lastActive": 1793372300407
   },
   "XRP:chute_24h": {
    "since": 1793321854926,
