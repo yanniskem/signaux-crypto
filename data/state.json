@@ -4,21 +4,9 @@
    "since": 1793149018791,
    "lastActive": 1793403551999
   },
-  "LINK:chute_24h": {
-   "since": 1793313873414,
-   "lastActive": 1793375592509
-  },
-  "AVAX:chute_24h": {
-   "since": 1793317229668,
-   "lastActive": 1793375592509
-  },
   "ETH:rsi_bas": {
    "since": 1793321854926,
    "lastActive": 1793436359092
-  },
-  "SOL:chute_24h": {
-   "since": 1793321854926,
-   "lastActive": 1793375592509
   },
   "SOL:rsi_bas": {
    "since": 1793321854926,
