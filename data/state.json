@@ -16,10 +16,6 @@
    "since": 1793313873414,
    "lastActive": 1793375592509
   },
-  "ADA:chute_24h": {
-   "since": 1793317229668,
-   "lastActive": 1793321854926
-  },
   "ADA:rsi_bas": {
    "since": 1793317229668,
    "lastActive": 1793328619766
@@ -58,11 +54,11 @@
   },
   "LINK:envolee_24h": {
    "since": 1793403551999,
-   "lastActive": 1793403551999
+   "lastActive": 1793408308683
   },
   "DOT:envolee_24h": {
    "since": 1793403551999,
-   "lastActive": 1793403551999
+   "lastActive": 1793408308683
   }
  }
 }
