@@ -4,10 +4,6 @@
    "since": 1793149018791,
    "lastActive": 1793403551999
   },
-  "DOT:chute_24h": {
-   "since": 1793306774996,
-   "lastActive": 1793325527098
-  },
   "DOT:chute_7j": {
    "since": 1793306774996,
    "lastActive": 1793328619766
@@ -28,10 +24,6 @@
    "since": 1793317229668,
    "lastActive": 1793372300407
   },
-  "DOT:rsi_bas": {
-   "since": 1793317229668,
-   "lastActive": 1793325527098
-  },
   "ETH:rsi_bas": {
    "since": 1793321854926,
    "lastActive": 1793400136483
@@ -44,17 +36,9 @@
    "since": 1793321854926,
    "lastActive": 1793396465191
   },
-  "XRP:chute_24h": {
-   "since": 1793321854926,
-   "lastActive": 1793325527098
-  },
-  "LTC:chute_24h": {
-   "since": 1793321854926,
-   "lastActive": 1793325527098
-  },
   "LINK:envolee_24h": {
    "since": 1793403551999,
-   "lastActive": 1793411857155
+   "lastActive": 1793414987313
   },
   "DOT:envolee_24h": {
    "since": 1793403551999,
