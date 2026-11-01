@@ -3,6 +3,10 @@
   "LINK:envolee_24h": {
    "since": 1793403551999,
    "lastActive": 1793475623366
+  },
+  "SOL:rsi_bas": {
+   "since": 1793537450512,
+   "lastActive": 1793537450512
   }
  }
 }
