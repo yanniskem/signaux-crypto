@@ -2,7 +2,11 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1793537450512,
-   "lastActive": 1793685396875
+   "lastActive": 1793689807394
+  },
+  "ADA:rsi_bas": {
+   "since": 1793689807394,
+   "lastActive": 1793689807394
   }
  }
 }
