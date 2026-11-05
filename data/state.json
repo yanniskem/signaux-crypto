@@ -15,6 +15,38 @@
   "ADA:envolee_24h": {
    "since": 1793851048563,
    "lastActive": 1793851048563
+  },
+  "ETH:chute_24h": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
+  },
+  "SOL:rsi_bas": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
+  },
+  "DOGE:chute_24h": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
+  },
+  "ADA:chute_24h": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
+  },
+  "AVAX:chute_24h": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
+  },
+  "LINK:chute_24h": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
+  },
+  "DOT:chute_24h": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
+  },
+  "LTC:chute_24h": {
+   "since": 1793894527916,
+   "lastActive": 1793894527916
   }
  }
 }
