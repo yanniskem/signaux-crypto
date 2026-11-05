@@ -10,7 +10,15 @@
   },
   "ETH:envolee_24h": {
    "since": 1793840676100,
-   "lastActive": 1793840676100
+   "lastActive": 1793844898886
+  },
+  "LINK:envolee_24h": {
+   "since": 1793844898886,
+   "lastActive": 1793844898886
+  },
+  "LTC:envolee_24h": {
+   "since": 1793844898886,
+   "lastActive": 1793844898886
   }
  }
 }
