@@ -2,11 +2,11 @@
  "seen": {
   "ETH:chute_24h": {
    "since": 1793894527916,
-   "lastActive": 1793944775890
+   "lastActive": 1793949350543
   },
   "SOL:rsi_bas": {
    "since": 1793894527916,
-   "lastActive": 1793944775890
+   "lastActive": 1793949350543
   },
   "DOGE:chute_24h": {
    "since": 1793894527916,
@@ -14,7 +14,7 @@
   },
   "ADA:chute_24h": {
    "since": 1793894527916,
-   "lastActive": 1793937309651
+   "lastActive": 1793949350543
   },
   "AVAX:chute_24h": {
    "since": 1793894527916,
@@ -22,7 +22,7 @@
   },
   "LINK:chute_24h": {
    "since": 1793894527916,
-   "lastActive": 1793922361922
+   "lastActive": 1793949350543
   },
   "DOT:chute_24h": {
    "since": 1793894527916,
@@ -34,7 +34,7 @@
   },
   "XRP:chute_24h": {
    "since": 1793919036575,
-   "lastActive": 1793944775890
+   "lastActive": 1793949350543
   }
  }
 }
