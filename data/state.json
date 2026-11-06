@@ -14,7 +14,7 @@
   },
   "ETH:chute_24h": {
    "since": 1793894527916,
-   "lastActive": 1793933639032
+   "lastActive": 1793937309651
   },
   "SOL:rsi_bas": {
    "since": 1793894527916,
@@ -26,7 +26,7 @@
   },
   "ADA:chute_24h": {
    "since": 1793894527916,
-   "lastActive": 1793922361922
+   "lastActive": 1793937309651
   },
   "AVAX:chute_24h": {
    "since": 1793894527916,
@@ -46,7 +46,7 @@
   },
   "XRP:chute_24h": {
    "since": 1793919036575,
-   "lastActive": 1793922361922
+   "lastActive": 1793937309651
   }
  }
 }
