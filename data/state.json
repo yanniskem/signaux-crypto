@@ -1,24 +1,12 @@
 {
  "seen": {
-  "ETH:envolee_24h": {
-   "since": 1793840676100,
-   "lastActive": 1793851048563
-  },
-  "LINK:envolee_24h": {
-   "since": 1793844898886,
-   "lastActive": 1793851048563
-  },
-  "ADA:envolee_24h": {
-   "since": 1793851048563,
-   "lastActive": 1793851048563
-  },
   "ETH:chute_24h": {
    "since": 1793894527916,
-   "lastActive": 1793937309651
+   "lastActive": 1793941141360
   },
   "SOL:rsi_bas": {
    "since": 1793894527916,
-   "lastActive": 1793922361922
+   "lastActive": 1793941141360
   },
   "DOGE:chute_24h": {
    "since": 1793894527916,
@@ -46,7 +34,7 @@
   },
   "XRP:chute_24h": {
    "since": 1793919036575,
-   "lastActive": 1793937309651
+   "lastActive": 1793941141360
   }
  }
 }
