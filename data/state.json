@@ -4,25 +4,9 @@
    "since": 1793894527916,
    "lastActive": 1793966223148
   },
-  "SOL:rsi_bas": {
-   "since": 1793894527916,
-   "lastActive": 1793955520954
-  },
-  "ADA:chute_24h": {
-   "since": 1793894527916,
-   "lastActive": 1793955520954
-  },
-  "LINK:chute_24h": {
-   "since": 1793894527916,
-   "lastActive": 1793955520954
-  },
   "XRP:chute_24h": {
    "since": 1793919036575,
    "lastActive": 1793974790876
-  },
-  "SOL:chute_24h": {
-   "since": 1793955520954,
-   "lastActive": 1793955520954
   }
  }
 }
