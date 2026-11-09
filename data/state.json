@@ -2,11 +2,11 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794257726792
+   "lastActive": 1794261084153
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794257726792
+   "lastActive": 1794261084153
   },
   "DOGE:bas_90j": {
    "since": 1794177650029,
@@ -22,7 +22,7 @@
   },
   "AVAX:envolee_24h": {
    "since": 1794236272069,
-   "lastActive": 1794240238733
+   "lastActive": 1794261084153
   }
  }
 }
