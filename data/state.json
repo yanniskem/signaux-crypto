@@ -2,19 +2,15 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794294581464
+   "lastActive": 1794301031792
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794294581464
+   "lastActive": 1794301031792
   },
   "DOGE:bas_90j": {
    "since": 1794177650029,
    "lastActive": 1794225513039
-  },
-  "ADA:bas_90j": {
-   "since": 1794177650029,
-   "lastActive": 1794212995580
   },
   "XRP:chute_24h": {
    "since": 1794225513039,
@@ -26,7 +22,11 @@
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1794286543580
+   "lastActive": 1794301031792
+  },
+  "XRP:chute_7j": {
+   "since": 1794301031792,
+   "lastActive": 1794301031792
   }
  }
 }
