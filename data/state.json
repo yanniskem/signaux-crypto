@@ -2,19 +2,11 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794311614049
+   "lastActive": 1794315723397
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794311614049
-  },
-  "DOGE:bas_90j": {
-   "since": 1794177650029,
-   "lastActive": 1794225513039
-  },
-  "XRP:chute_24h": {
-   "since": 1794225513039,
-   "lastActive": 1794225513039
+   "lastActive": 1794315723397
   },
   "AVAX:envolee_24h": {
    "since": 1794236272069,
@@ -26,7 +18,7 @@
   },
   "XRP:chute_7j": {
    "since": 1794301031792,
-   "lastActive": 1794311614049
+   "lastActive": 1794315723397
   }
  }
 }
