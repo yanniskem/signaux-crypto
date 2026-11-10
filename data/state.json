@@ -2,11 +2,11 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794308106626
+   "lastActive": 1794311614049
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794308106626
+   "lastActive": 1794311614049
   },
   "DOGE:bas_90j": {
    "since": 1794177650029,
@@ -22,11 +22,11 @@
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1794308106626
+   "lastActive": 1794311614049
   },
   "XRP:chute_7j": {
    "since": 1794301031792,
-   "lastActive": 1794308106626
+   "lastActive": 1794311614049
   }
  }
 }
