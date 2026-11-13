@@ -2,35 +2,39 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794528797233
+   "lastActive": 1794556280522
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794528797233
+   "lastActive": 1794556280522
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1794528797233
+   "lastActive": 1794556280522
   },
   "ETH:rsi_bas": {
    "since": 1794325922025,
-   "lastActive": 1794528797233
+   "lastActive": 1794556280522
   },
   "DOGE:bas_90j": {
    "since": 1794325922025,
-   "lastActive": 1794528797233
+   "lastActive": 1794556280522
   },
   "ADA:bas_90j": {
    "since": 1794325922025,
-   "lastActive": 1794509492963
+   "lastActive": 1794556280522
   },
   "DOGE:rsi_bas": {
    "since": 1794480999788,
-   "lastActive": 1794528797233
+   "lastActive": 1794556280522
   },
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1794528797233
+   "lastActive": 1794556280522
+  },
+  "ADA:rsi_bas": {
+   "since": 1794556280522,
+   "lastActive": 1794556280522
   }
  }
 }
