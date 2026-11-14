@@ -2,55 +2,115 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "ETH:rsi_bas": {
    "since": 1794325922025,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "DOGE:bas_90j": {
    "since": 1794325922025,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "ADA:bas_90j": {
    "since": 1794325922025,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "DOGE:rsi_bas": {
    "since": 1794480999788,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "ADA:rsi_bas": {
    "since": 1794556280522,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "ETH:bas_90j": {
    "since": 1794625658493,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "SOL:chute_7j": {
    "since": 1794625658493,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "XRP:bas_90j": {
    "since": 1794625658493,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
   },
   "SOL:bas_90j": {
    "since": 1794655424600,
-   "lastActive": 1794655424600
+   "lastActive": 1794678997758
+  },
+  "ETH:chute_7j": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "SOL:chute_24h": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "XRP:chute_7j": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "DOGE:chute_24h": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "DOGE:chute_7j": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "ADA:chute_24h": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "AVAX:chute_24h": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "LINK:chute_24h": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "LINK:chute_7j": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "LINK:rsi_bas": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "LINK:bas_90j": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "DOT:chute_24h": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "DOT:chute_7j": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "LTC:chute_24h": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
+  },
+  "LTC:rsi_bas": {
+   "since": 1794678997758,
+   "lastActive": 1794678997758
   }
  }
 }
