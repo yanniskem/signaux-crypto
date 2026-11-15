@@ -2,19 +2,19 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "ETH:rsi_bas": {
    "since": 1794325922025,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "DOGE:bas_90j": {
    "since": 1794325922025,
@@ -26,15 +26,15 @@
   },
   "DOGE:rsi_bas": {
    "since": 1794480999788,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "ADA:rsi_bas": {
    "since": 1794556280522,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "ETH:bas_90j": {
    "since": 1794625658493,
@@ -42,7 +42,7 @@
   },
   "SOL:chute_7j": {
    "since": 1794625658493,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "XRP:bas_90j": {
    "since": 1794625658493,
@@ -54,11 +54,11 @@
   },
   "ETH:chute_7j": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "SOL:chute_24h": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "XRP:chute_7j": {
    "since": 1794678997758,
@@ -66,19 +66,19 @@
   },
   "DOGE:chute_24h": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "DOGE:chute_7j": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "ADA:chute_24h": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "AVAX:chute_24h": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "LINK:chute_24h": {
    "since": 1794678997758,
@@ -90,7 +90,7 @@
   },
   "LINK:rsi_bas": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "LINK:bas_90j": {
    "since": 1794678997758,
@@ -98,19 +98,19 @@
   },
   "DOT:chute_24h": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "DOT:chute_7j": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "LTC:chute_24h": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "LTC:rsi_bas": {
    "since": 1794678997758,
-   "lastActive": 1794694663488
+   "lastActive": 1794710126724
   },
   "BTC:chute_7j": {
    "since": 1794694663488,
