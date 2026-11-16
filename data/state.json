@@ -2,83 +2,63 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "ETH:rsi_bas": {
    "since": 1794325922025,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "DOGE:rsi_bas": {
    "since": 1794480999788,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "ADA:rsi_bas": {
    "since": 1794556280522,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "SOL:chute_7j": {
    "since": 1794625658493,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "ETH:chute_7j": {
    "since": 1794678997758,
    "lastActive": 1794764415389
   },
-  "SOL:chute_24h": {
-   "since": 1794678997758,
-   "lastActive": 1794710126724
-  },
-  "DOGE:chute_24h": {
-   "since": 1794678997758,
-   "lastActive": 1794710126724
-  },
   "DOGE:chute_7j": {
    "since": 1794678997758,
    "lastActive": 1794764415389
-  },
-  "ADA:chute_24h": {
-   "since": 1794678997758,
-   "lastActive": 1794710126724
   },
   "AVAX:chute_24h": {
    "since": 1794678997758,
    "lastActive": 1794739376893
   },
-  "LINK:rsi_bas": {
-   "since": 1794678997758,
-   "lastActive": 1794710126724
-  },
-  "DOT:chute_24h": {
-   "since": 1794678997758,
-   "lastActive": 1794710126724
-  },
   "DOT:chute_7j": {
    "since": 1794678997758,
    "lastActive": 1794764415389
   },
-  "LTC:chute_24h": {
-   "since": 1794678997758,
-   "lastActive": 1794710126724
-  },
   "LTC:rsi_bas": {
    "since": 1794678997758,
-   "lastActive": 1794782703276
+   "lastActive": 1794796899028
   },
   "XRP:envolee_24h": {
    "since": 1794782703276,
    "lastActive": 1794782703276
+  },
+  "AVAX:chute_7j": {
+   "since": 1794796899028,
+   "lastActive": 1794796899028
   }
  }
 }
