@@ -2,55 +2,55 @@
  "seen": {
   "SOL:rsi_bas": {
    "since": 1794087624289,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "XRP:rsi_bas": {
    "since": 1794177650029,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "ETH:rsi_bas": {
    "since": 1794325922025,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "DOGE:rsi_bas": {
    "since": 1794480999788,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "ADA:rsi_bas": {
    "since": 1794556280522,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "LTC:rsi_bas": {
    "since": 1794678997758,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "AVAX:chute_7j": {
    "since": 1794975145713,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "BTC:bas_90j": {
    "since": 1795009961329,
-   "lastActive": 1795123565393
+   "lastActive": 1795174037079
   },
   "LTC:bas_90j": {
    "since": 1795009961329,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "ETH:bas_90j": {
    "since": 1795038746352,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "AVAX:bas_90j": {
    "since": 1795038746352,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "DOT:chute_7j": {
    "since": 1795038746352,
@@ -58,11 +58,23 @@
   },
   "DOT:bas_90j": {
    "since": 1795123565393,
-   "lastActive": 1795143859821
+   "lastActive": 1795174037079
   },
   "LTC:chute_7j": {
    "since": 1795123565393,
-   "lastActive": 1795123565393
+   "lastActive": 1795174037079
+  },
+  "DOGE:bas_90j": {
+   "since": 1795174037079,
+   "lastActive": 1795174037079
+  },
+  "LINK:bas_90j": {
+   "since": 1795174037079,
+   "lastActive": 1795174037079
+  },
+  "LTC:chute_24h": {
+   "since": 1795174037079,
+   "lastActive": 1795174037079
   }
  }
 }
