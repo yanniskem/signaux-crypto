@@ -10,11 +10,11 @@
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1795436360153
+   "lastActive": 1795481176548
   },
   "ETH:rsi_bas": {
    "since": 1794325922025,
-   "lastActive": 1795436360153
+   "lastActive": 1795481176548
   },
   "DOGE:rsi_bas": {
    "since": 1794480999788,
@@ -22,7 +22,7 @@
   },
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1795436360153
+   "lastActive": 1795481176548
   },
   "ADA:rsi_bas": {
    "since": 1794556280522,
@@ -46,11 +46,11 @@
   },
   "DOT:croix_mort": {
    "since": 1795329363061,
-   "lastActive": 1795436360153
+   "lastActive": 1795481176548
   },
   "ADA:croix_mort": {
    "since": 1795401530246,
-   "lastActive": 1795436360153
+   "lastActive": 1795481176548
   }
  }
 }
