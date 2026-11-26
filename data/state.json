@@ -6,7 +6,7 @@
   },
   "DOT:rsi_bas": {
    "since": 1794267780059,
-   "lastActive": 1795652075467
+   "lastActive": 1795685186573
   },
   "ETH:rsi_bas": {
    "since": 1794325922025,
@@ -18,7 +18,7 @@
   },
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1795652075467
+   "lastActive": 1795685186573
   },
   "ADA:rsi_bas": {
    "since": 1794556280522,
@@ -67,6 +67,10 @@
   "AVAX:rsi_bas": {
    "since": 1795620611089,
    "lastActive": 1795620611089
+  },
+  "LTC:envolee_24h": {
+   "since": 1795685186573,
+   "lastActive": 1795685186573
   }
  }
 }
