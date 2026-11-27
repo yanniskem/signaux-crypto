@@ -1,16 +1,8 @@
 {
  "seen": {
-  "DOT:rsi_bas": {
-   "since": 1794267780059,
-   "lastActive": 1795685186573
-  },
   "BTC:rsi_bas": {
    "since": 1794528797233,
    "lastActive": 1795721603351
-  },
-  "LTC:envolee_24h": {
-   "since": 1795685186573,
-   "lastActive": 1795685186573
   }
  }
 }
