@@ -2,15 +2,15 @@
  "seen": {
   "BTC:rsi_bas": {
    "since": 1794528797233,
-   "lastActive": 1795813752962
+   "lastActive": 1795837885590
   },
   "ETH:rsi_bas": {
    "since": 1795813752962,
-   "lastActive": 1795813752962
+   "lastActive": 1795837885590
   },
   "DOT:rsi_bas": {
    "since": 1795813752962,
-   "lastActive": 1795813752962
+   "lastActive": 1795837885590
   }
  }
 }
